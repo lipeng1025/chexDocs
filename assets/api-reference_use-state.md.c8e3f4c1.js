@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.a08a8f7a.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"api-reference/use-state.md"}'),r={name:"api-reference/use-state.md"};function s(c,n,o,p,i,_){return a(),t("div")}const m=e(r,[["render",s]]);export{f as __pageData,m as default};
