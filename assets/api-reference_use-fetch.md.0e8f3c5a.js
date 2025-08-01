@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as r}from"./app.a08a8f7a.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"api-reference/use-fetch.md"}'),a={name:"api-reference/use-fetch.md"};function c(s,n,o,p,f,i){return r(),t("div")}const m=e(a,[["render",c]]);export{d as __pageData,m as default};

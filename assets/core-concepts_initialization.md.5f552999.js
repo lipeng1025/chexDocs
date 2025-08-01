@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./app.a08a8f7a.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"core-concepts/initialization.md"}'),i={name:"core-concepts/initialization.md"};function o(n,c,r,s,p,_){return a(),e("div")}const m=t(i,[["render",o]]);export{l as __pageData,m as default};

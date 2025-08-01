@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.a08a8f7a.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"core-concepts/data-fetching.md"}'),c={name:"core-concepts/data-fetching.md"};function o(n,r,s,p,d,i){return a(),t("div")}const m=e(c,[["render",o]]);export{f as __pageData,m as default};

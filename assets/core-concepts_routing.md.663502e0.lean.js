@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./app.a08a8f7a.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"core-concepts/routing.md"}'),r={name:"core-concepts/routing.md"};function c(n,a,s,p,i,_){return o(),t("div")}const f=e(r,[["render",c]]);export{m as __pageData,f as default};
