@@ -4,6 +4,7 @@ export default defineConfig({
   title: 'Nuxt3 技术知识库',
   description: 'Nuxt3 开发指南与最佳实践',
   lang: 'zh-CN',
+  base: '/chexDocs/',
   
   themeConfig: {
     nav: [
