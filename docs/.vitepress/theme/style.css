@@ -50,8 +50,8 @@
 /* ===== 覆盖特定颜色的文本 ===== */
 div[class*='language-'] code span {
   &[style*="color: rgb(194, 195, 197)"] {
-    color: #5442e1 !important; /* 替换为红色 */
-    outline: 1px solid red !important;
+    color: #5f6368 !important; /* 替换为红色 */
+    outline: 1px solid #94a3b8 !important;
   }
 }
 
@@ -64,7 +64,15 @@ div[class*='language-'] code span {
 }
 
 .vp-doc [class*='language-'] > span.lang {
-  color: #000000 !important;
+  color: #000000 !;
+}
+
+:root.dark div .toggle-btn {
+  color: white;
+}
+:root.dark div .section-title {
+  color: white;
+
 }
 
 /* ===== 响应式优化 ===== */
