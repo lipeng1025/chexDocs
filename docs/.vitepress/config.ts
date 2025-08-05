@@ -10,10 +10,10 @@ export default defineConfig({
     // 设置浏览器标签的标题
     ['meta', { name: 'theme-color', content: '#42b983' }],
     // 设置 favicon 图标
-    ['link', { rel: 'icon', href: '../favicon.ico' }],
+    ['link', { rel: 'icon', href: '/chexDocs/favicon.ico' }],
   ],
   themeConfig: {
-    logo: '../favicon.ico',
+    logo: '/favicon.ico',
     outline: false, // 完全禁用右侧目录
     nav: [
       { text: '首页', link: '/' },
