@@ -12,7 +12,8 @@ const customData = [
         { title: "layouts", link: "#layouts" },
         { title: "middleware", link: "#middleware" },
         { title: "pages", link: "#pages" },
-        { title: "plugins", link: "#plugins" }
+        { title: "plugins", link: "#plugins" },
+        { title: "utils", link: "#utils" }
       ]
     },
     {

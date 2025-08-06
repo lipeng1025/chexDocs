@@ -64,7 +64,7 @@ div[class*='language-'] code span {
 }
 
 .vp-doc [class*='language-'] > span.lang {
-  color: #000000 !;
+  color: #000000 !important;
 }
 
 :root.dark div .toggle-btn {
