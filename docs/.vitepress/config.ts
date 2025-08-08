@@ -10,11 +10,10 @@ export default defineConfig({
     // 设置浏览器标签的标题
     ['meta', { name: 'theme-color', content: '#42b983' }],
     // 设置 favicon 图标
-    ['link', { rel: 'icon', href: '/chexDocs/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/chexDocs/favicon.ico' }]
   ],
   themeConfig: {
     logo: '/favicon.ico',
-    outline: false, // 完全禁用右侧目录
     nav: [
       { text: '首页', link: '/' },
       { text: 'Nuxt3', link: '/NuxtDocs/', activeMatch: '/NuxtDocs/' },
@@ -33,11 +32,47 @@ export default defineConfig({
 
       '/NuxtDocs/': [
         {
-          text: '📚 Nuxt3: 核心',
-          collapsible: true,  // 启用折叠
-          collapsed: false,    // 默认折叠
+          text: 'Nuxt3: 目录结构',
+          collapsed: true,    // 默认折叠
           items: [
-            { text: '目录结构', link: '/NuxtDocs/CoreEssentials/DirectoryStructure' },
+              { text: '.nuxt', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/nuxt' },
+              { text: '.output', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/output' },
+              {
+                text: '📌 app',
+                collapsed: true,    // 默认折叠
+                items: [
+                  { text: 'assets', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/assets' },
+                  { text: 'components', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/components' },
+                  { text: 'composables', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/composables' },
+                  { text: 'layouts', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/layouts' },
+                  { text: 'middleware', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/middleware' },
+                  { text: 'pages', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/pages' },
+                  { text: 'plugins', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/plugins' },
+                  { text: 'utils', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/utils' },
+                  { text: 'app.vue', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/appvue' },
+                  { text: 'app.config.ts', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/appconfigts' },
+                  { text: 'error.vue', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/errorvue' },
+                ]
+              },
+              { text: 'content', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/content' },
+              { text: 'modules', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/modules' },
+              { text: 'node_modules', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/node_modules' },
+              { text: '📌 public', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/public' },
+              { text: 'server', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/server' },
+              { text: 'shared', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/shared' },
+              { text: '📌 .env', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/env' },
+              { text: '📌 .gitignore', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/gitignore' },
+              { text: '.nuxtignore', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/nuxtignore' },
+              { text: '.nuxtrc', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/nuxtrc' },
+              { text: '📌 nuxt.config.ts', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/nuxtconfigts' },
+              { text: '📌 package.json', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/packagejson' },
+              { text: 'tsconfig.json', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/tsconfigjson' },
+          ]
+        },
+        {
+          text: 'Nuxt3: 核心',
+          collapsed: true,    // 默认折叠
+          items: [
             { text: '项目配置', link: '/NuxtDocs/CoreEssentials/ProjectConfiguration' },
             { text: '路由系统', link: '/NuxtDocs/CoreEssentials/Routing' },
             { text: '数据获取', link: '/NuxtDocs/CoreEssentials/DataFetch' },
@@ -45,8 +80,7 @@ export default defineConfig({
           ]
         },
         {
-          text: '⚙️ Nuxt3: 了解',
-          collapsible: true,  // 启用折叠
+          text: 'Nuxt3: 了解',
           collapsed: true,    // 默认折叠
           items: [
             { text: '渲染模式差异', link: '/NuxtDocs/Overview/RenderingModes' },
@@ -62,7 +96,7 @@ export default defineConfig({
           ]
         },
         {
-          text: '🧩 Nuxt3: 其他',
+          text: 'Nuxt3: 其他',
           items: [
             // { text: 'TypeScript 深度集成', link: '/NuxtDocs/Overview/TypeScriptIntegration' },
             // { text: '插件与模块开发', link: '/NuxtDocs/Overview/PluginModuleDevelopment' },

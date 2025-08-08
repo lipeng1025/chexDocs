@@ -1,0 +1,229 @@
+:root {
+  /* 基础调色板 - 白天模式 */
+  --vp-c-bg: #ffffff;
+  --vp-c-text: #2d3748;
+  
+  /* Details 块 */
+  --details-bg: #f7f9fc;
+  --details-hover-bg: #edf2f7;
+  --details-border: #4299e1;
+  --details-summary: #2b6cb0;
+  
+  /* 代码块 */
+  --code-lang-color: #1a365d;
+  --code-comment: #4a5568;
+  --code-bg: #f8fafc;
+  
+  /* Markdown 元素协调色 */
+  --md-heading: #2d3748;
+  --md-link: #3182ce;
+  --md-quote-border: #cbd5e0;
+  
+  /* 阴影 */
+  --details-shadow: 0 4px 6px -1px rgba(66, 153, 225, 0.1);
+
+  
+  /* 字体大小层级系统 */
+  --vp-font-size-base: 16px;              /* 基础正文大小 */
+  --vp-line-height-base: 1.8;             /* 行高提升可读性 */
+
+  /* 文字颜色增强 */
+  --vp-c-text-1: rgba(0, 0, 0, 0.92);     /* 主文本-纯黑92%透明度 */
+  --vp-c-text-2: rgba(0, 0, 0, 0.78);     /* 次级文本 */
+  --vp-c-text-3: rgba(0, 0, 0, 0.56);     /* 辅助文本 */
+
+  /* 标题增强 */
+  --vp-home-hero-name-color: transparent;
+  --vp-c-heading: #1a1a1a;                /* 标题纯黑 */
+}
+
+.dark {
+  /* 基础调色板 - 黑夜模式 */
+  --vp-c-bg: #1a202c;
+  --vp-c-text: #e2e8f0;
+  
+  /* Details 块 */
+  --details-bg: #2d3748;
+  --details-hover-bg: #4a5568;
+  --details-border: #63b3ed;
+  --details-summary: #90cdf4;
+  
+  /* 代码块 */
+  --code-lang-color: #ebf4ff;
+  --code-comment: #a0aec0;
+  --code-bg: #2d3748;
+  
+  /* Markdown 元素协调色 */
+  --md-heading: #e2e8f0;
+  --md-link: #63b3ed;
+  --md-quote-border: #4a5568;
+  
+  /* 阴影 */
+  --details-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25);
+
+  /* 深色文字系统 */
+  --vp-c-text-1: rgba(255, 255, 255, 0.92);  /* 纯白92% */
+  --vp-c-text-2: rgba(255, 255, 255, 0.82);
+  --vp-c-text-3: rgba(255, 255, 255, 0.64);
+  --vp-c-heading: #ffffff;                   /* 标题纯白 */
+
+  /* 深色代码 */
+  .vp-doc :not(pre) > code {
+    color: #ff7b72; /* GitHub深色模式红 */
+  }
+}
+
+/* ===== DETAILS 块优化 ===== */
+.custom-block.details {
+  background-color: var(--details-bg);
+  border-radius: 8px;
+  border-left: 4px solid var(--details-border);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark .custom-block.details {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-block.details summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--details-summary);
+  font-size: 1.05rem;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.custom-block.details summary::after {
+  content: "›";
+  position: absolute;
+  right: 20px;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+  color: var(--details-border);
+}
+
+.custom-block.details[open] summary::after {
+  transform: rotate(270deg);
+}
+
+/* ===== 代码块语言标签 ===== */
+.vp-doc [class*='language-'] > span.lang {
+  color: var(--code-lang-color) !important;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.dark .vp-doc [class*='language-'] > span.lang {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ===== 代码注释优化 ===== */
+.vp-doc [class*='language-'] .token.comment {
+  color: var(--code-comment) !important;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+/* 特定注释增强 - 与Markdown引用块协调 */
+.vp-doc div[class*='language-'] code span[style*="#C2C3C5"],
+.vp-doc div[class*='language-'] code span[style*="#616E88"] {
+  color: var(--code-comment) !important;
+}
+
+/* ===== 与Markdown元素协调 ===== */
+/* 标题颜色协调 */
+.vp-doc h1, .vp-doc h2, .vp-doc h3 {
+  color: var(--md-heading);
+}
+
+/* 链接颜色协调 */
+.vp-doc a {
+  color: var(--md-link);
+  transition: color 0.2s;
+}
+
+/* 引用块协调 */
+.vp-doc blockquote {
+  border-left: 4px solid var(--md-quote-border);
+  background: var(--details-bg);
+}
+
+/* 正文文本增强 */
+.vp-doc {
+  font-size: var(--vp-font-size-base);
+  color: var(--vp-c-text-1);
+  font-weight: 400;
+}
+
+/* 标题层级放大 */
+.vp-doc h1 {
+  font-size: 2.2rem;
+  color: var(--vp-c-heading);
+}
+.vp-doc h2 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.vp-doc h3 {
+  font-size: 1.5rem;
+}
+
+/* 正文文本增强 */
+.vp-doc {
+  font-size: var(--vp-font-size-base);
+  color: var(--vp-c-text-1);
+  font-weight: 400;
+}
+
+/* 标题层级放大 */
+.vp-doc h1 {
+  font-size: 2.2rem;
+  color: var(--vp-c-heading);
+}
+.vp-doc h2 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.vp-doc h3 {
+  font-size: 1.5rem;
+}
+
+/* 代码块文字 */
+.vp-doc :not(pre) > code {
+  font-size: 0.96em;
+  color: #d63200; /* 增强代码红色 */
+}
+
+/* 强调文本 */
+.vp-doc strong {
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+}
+
+/* 链接颜色保持可见 */
+.vp-doc a {
+  color: var(--vp-c-brand);
+  text-decoration: underline;
+}
+
+/* 表格文字优化 */
+.vp-doc table {
+  font-size: 0.95em;
+}
+.vp-doc th {
+  color: var(--vp-c-heading);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --vp-font-size-base: 17px; /* 移动端稍大 */
+  }
+  .vp-doc h1 {
+    font-size: 2rem;
+  }
+}

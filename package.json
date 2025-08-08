@@ -9,9 +9,11 @@
     "deploy": "gh-pages -d docs/.vitepress/dist"
   },
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^2.0.0-rc.112",
     "gh-pages": "^6.3.0",
-    "vitepress": "1.0.0-alpha.28",
-    "vue": "3.2.44"
+    "sass-embedded": "^1.90.0",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.18"
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -19,5 +21,10 @@
         "@algolia/client-search"
       ]
     }
+  },
+  "dependencies": {
+    "@vue/theme": "^2.3.0",
+    "@vueuse/core": "^13.6.0",
+    "@vueuse/shared": "^13.6.0"
   }
 }
