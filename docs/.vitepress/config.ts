@@ -16,6 +16,7 @@ export default defineConfig({
     logo: '/favicon.ico',
     nav: [
       { text: '首页', link: '/' },
+      { text: 'Vue3', link: '/VueDocs/', activeMatch: '/VueDocs/' },
       { text: 'Nuxt3', link: '/NuxtDocs/', activeMatch: '/NuxtDocs/' },
       { text: 'Laravel12', link: '/LaravelDocs/', activeMatch: '/LaravelDocs/' }
     ],
@@ -29,10 +30,19 @@ export default defineConfig({
           ]
         }
       ],
+      
+      '/VueDocs/': [
+        {
+          text: '📌 Vue3: 核心',
+          items: [
+            { text: '基本知识', link: '/VueDocs/CoreEssentials/BasicKnowledge' },
+          ]
+        }
+      ],
 
       '/NuxtDocs/': [
         {
-          text: 'Nuxt3: 目录结构',
+          text: '📌 Nuxt3: 目录结构',
           collapsed: true,    // 默认折叠
           items: [
               { text: '.nuxt', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/nuxt' },
@@ -58,7 +68,7 @@ export default defineConfig({
               { text: 'modules', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/modules' },
               { text: 'node_modules', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/node_modules' },
               { text: '📌 public', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/public' },
-              { text: 'server', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/server' },
+              { text: '📌 server', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/server' },
               { text: 'shared', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/shared' },
               { text: '📌 .env', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/env' },
               { text: '📌 .gitignore', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/gitignore' },
@@ -66,17 +76,26 @@ export default defineConfig({
               { text: '.nuxtrc', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/nuxtrc' },
               { text: '📌 nuxt.config.ts', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/nuxtconfigts' },
               { text: '📌 package.json', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/packagejson' },
-              { text: 'tsconfig.json', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/tsconfigjson' },
+              { text: 'ts.config.json', link: '/NuxtDocs/CoreEssentials/DirectoryStructure/tsconfigjson' },
           ]
         },
         {
-          text: 'Nuxt3: 核心',
+          text: '📌 Nuxt3: 核心',
           collapsed: true,    // 默认折叠
           items: [
             { text: '项目配置', link: '/NuxtDocs/CoreEssentials/ProjectConfiguration' },
             { text: '路由系统', link: '/NuxtDocs/CoreEssentials/Routing' },
             { text: '数据获取', link: '/NuxtDocs/CoreEssentials/DataFetch' },
             { text: '状态管理', link: '/NuxtDocs/CoreEssentials/StateManagement' },
+            { 
+              text: '常用API',
+              collapsed: true,    // 默认折叠
+              items: [
+                  { text: 'ComponentsApi', link: '/NuxtDocs/CoreEssentials/NuxtApi/ComponentsApi' },
+                  { text: 'ComposablesApi', link: '/NuxtDocs/CoreEssentials/NuxtApi/ComposablesApi' },
+                  { text: 'UtilsApi', link: '/NuxtDocs/CoreEssentials/NuxtApi/UtilsApi' }
+              ]
+            },
           ]
         },
         {
@@ -88,37 +107,27 @@ export default defineConfig({
             { text: '错误处理与调试', link: '/NuxtDocs/Overview/ErrorHandling', },
             { text: '-------------------------------', link: '' },
             { text: '构建优化', link: '/NuxtDocs/Overview/BuildOptimization' },
-            { text: 'UI 框架集成', link: '/NuxtDocs/Overview/UIFrameworkIntegration' },
-            { text: '过渡动画', link: '/NuxtDocs/Overview/Transitions' },
+            { text: '部署适配', link: '/NuxtDocs/Overview/DeploymentAdaptation' },
+            { text: '缓存策略', link: '/NuxtDocs/Overview/CachingStrategies' },
             { text: '-------------------------------', link: '' },
-            { text: 'PWA 支持', link: '/NuxtDocs/Overview/PWASupport' },
             { text: '国际化', link: '/NuxtDocs/Overview/Internationalization' },
+            { text: 'TypeScript 深度集成', link: '/NuxtDocs/Overview/TypeScriptIntegration' },
+            { text: 'PWA 支持', link: '/NuxtDocs/Overview/PWASupport' },
+            { text: '-------------------------------', link: '' },
+            { text: '插件与模块开发', link: '/NuxtDocs/Overview/PluginModuleDevelopment' },
           ]
-        },
-        {
-          text: 'Nuxt3: 其他',
-          items: [
-            // { text: 'TypeScript 深度集成', link: '/NuxtDocs/Overview/TypeScriptIntegration' },
-            // { text: '插件与模块开发', link: '/NuxtDocs/Overview/PluginModuleDevelopment' },
-            // { text: '创建项目', link: '/NuxtDocs/Overview/initProject' },
-            // { text: '命令行工具', link: '/NuxtDocs/Overview/CLITools' },
-            // { text: '缓存策略', link: '/NuxtDocs/Overview/CachingStrategies' },
-            // { text: '部署适配', link: '/NuxtDocs/Overview/DeploymentAdaptation' },
-            // { text: '测试策略', link: '/NuxtDocs/Overview/TestingStrategies' },
-            // { text: 'API 路由', link: '/NuxtDocs/CoreEssentials/APIRouting' },
-          ]
-        },
+        }
       ],
       
       '/LaravelDocs/': [
         {
-          text: '📚 Laravel12: 核心',
+          text: '📌 Laravel12: 核心',
           items: [
             { text: '路由系统', link: '/LaravelDocs/CoreEssentials/Routing' },
           ]
         },
         {
-          text: '⚙️ Laravel12: 了解',
+          text: 'Laravel12: 了解',
           items: [
             { text: 'API 路由', link: '/LaravelDocs/Overview/APIRouting' },
           ]
@@ -129,11 +138,24 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lipeng1025' }
     ],
+
+    // 修改侧边栏目录标题
+    outlineTitle: '页面导航',
+    
+    // 修改上一页/下一页文本
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
+
+    search: {
+      provider: 'local'
+    },
     
     footer: {
       message: 'MIT Licensed',
       copyright: 'Copyright © 2023-present Your Team'
-    }
+    },
   },
   
   markdown: {
@@ -141,6 +163,6 @@ export default defineConfig({
       light: 'min-light',
       dark: 'nord'
     },
-    lineNumbers: true
+    lineNumbers: true,
   }
 })

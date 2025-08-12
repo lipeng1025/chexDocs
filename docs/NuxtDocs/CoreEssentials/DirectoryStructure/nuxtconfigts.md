@@ -450,6 +450,125 @@
     ...uiConfig  
   })
   ```
+## 完整文件配置
+
+  [nuxt.config.ts更详细的配置](https://nuxt.com/docs/4.x/api/nuxt-config)
+  ```ts
+  // nuxt.config.ts
+  export default defineNuxtConfig({
+    // 1. 应用配置
+    app: {
+      head: {},
+      layoutTransition: {},
+      pageTransition: {},
+      keepalive: false
+    },
+    
+    // 2. 运行时配置
+    runtimeConfig: {
+      public: {},
+      private: {}
+    },
+    
+    // 3. 模块配置
+    modules: [],
+    
+    // 4. 组件配置
+    components: true,
+    
+    // 5. 目录配置
+    dir: {
+      assets: 'assets',
+      layouts: 'layouts',
+      middleware: 'middleware',
+      pages: 'pages',
+      public: 'public',
+      plugins: 'plugins'
+    },
+    
+    // 6. 自动导入配置
+    imports: {
+      dirs: [],
+      global: false
+    },
+    
+    // 7. 别名配置
+    alias: {},
+    
+    // 8. 构建配置
+    build: {},
+    
+    // 9. Vite 配置
+    vite: {},
+    
+    // 10. Webpack 配置（不推荐，优先使用 Vite）
+    webpack: {},
+    
+    // 11. CSS 配置
+    css: [],
+    
+    // 12. 开发工具配置
+    devtools: {
+      enabled: false
+    },
+    
+    // 13. 实验性功能
+    experimental: {},
+    
+    // 14. TypeScript 配置
+    typescript: {
+      strict: true,
+      typeCheck: true
+    },
+    
+    // 15. SSR 配置
+    ssr: true,
+    
+    // 16. Nitro 配置
+    nitro: {
+      routeRules: {},
+      storage: {},
+      devProxy: {}
+    },
+    
+    // 17. 路由配置
+    router: {},
+    
+    // 18. 钩子配置
+    hooks: {},
+    
+    // 19. 构建后处理
+    postcss: {},
+    
+    // 20. 源文件配置
+    sourcemap: false,
+    
+    // 21. 调试配置
+    debug: false,
+    
+    // 22. 功能标志
+    features: {},
+    
+    // 23. 生成配置
+    generate: {},
+    
+    // 24. 插件配置
+    plugins: [],
+    
+    // 25. 忽略前缀
+    ignorePrefix: '-',
+    
+    // 26. 忽略选项
+    ignoreOptions: {},
+    
+    // 27. 服务器配置
+    server: {},
+    
+    // 28. 开发服务器配置
+    devServer: {}
+  })
+  ```
+
 
 
 
