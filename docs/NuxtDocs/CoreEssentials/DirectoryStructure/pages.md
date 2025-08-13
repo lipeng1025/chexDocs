@@ -21,7 +21,7 @@
   **4. 目录结构建议**
   > 当然在实际开发的项目中是由具体的项目而定，这里只是给个参考
   ``` text
-  ages/
+  pages/
     ├── index.vue            # 首页路由：/
     ├── about.vue            # /about
     ├── products/
