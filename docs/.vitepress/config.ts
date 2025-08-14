@@ -265,7 +265,7 @@ export default defineConfig({
     },
     
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/lipeng1025' }
+      { icon: 'github', link: 'https://github.com/yshz1024' }
     ],
 
     // 修改侧边栏目录标题
